@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container">
+    <form class="container col-xl-5 col-lg-6 col-md-8 my-4 bg-dark py-2 rounded" style="color: white;" name="genx">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">You are a.. </label>
+        </div>
+        <select name="ctype" class="custom-select" >
+          <option value="group">Company</option>
+          <option value="individual">Individual</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cname">Company/Website name </label>
+        <input class="form-control" type="text" placeholder="ex. Website, Google" id="cname" />
+      </div>
+      <div class="form-group">
+        <label for="curl">Company/Website URL </label>
+        <input class="form-control" type="url" id="curl" value="" placeholder="webdose.com" />
+      </div>
+      <div class="form-group">
+        <label for="ctag">Company/Website tag line </label>
+        <input class="form-control" type="text" id="ctag" value="" placeholder="helping bloggers since 2021" />
+      </div>
+      <div class="input-group my-4">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Website have signup</label>
+        </div>
+          <select name="youn" class="custom-select" >
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <hr />
+      <p>Information collected during sign-up (if available)</p>
+      <div class="row ">
+        <div class="col-6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="fb" />
+            <label class="custom-control-label" for="fb">Facebook </label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="email" />
+            <label class="custom-control-label" for="email">E-mail</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="name10" />
+            <label class="custom-control-label" for="name10">User Name</label>
+          </div>
+        </div>
+        <div class="col6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="dob" />
+            <label class="custom-control-label" for="dob">Date of birth</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="gen" />
+            <label class="custom-control-label" for="gen">Gender</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="add" />
+            <label class="custom-control-label" for="add">Address</label>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p>Mediums to communicate with you(leave blank if you don't wish to give)</p>
+      <div class="form-group">
+        <label for="cadd">Address </label>
+        <input class="form-control" type="text" placeholder="Andheri, Mumbai, Maharashtra, India" id="cadd" />
+      </div>
+      <div class="form-group">
+        <label for="cpurl">Contact page url</label>
+        <input class="form-control" type="text" placeholder="webdose.com/p/contactus.html" id="cpurl" />
+      </div>
+      <div class="form-group">
+        <label for="cmn">Mobile no. </label>
+        <input class="form-control" type="number" placeholder="9000000000" id="cmn" />
+      </div>
+      <div class="form-group">
+        <label for="ceid">Email id </label>
+        <input class="form-control" type="email" placeholder="contact@webdose.com" id="ceid" />
+      </div>
+      <div class="form-group">
+        <label for="cother">Other (provide according as shown) </label>
+        <input class="form-control" type="text" placeholder="Facebook : facebook URL" id="cother"/>
+      </div>
+
+    </form>
+   <div class="container">
+     
+   <button class="btn btn-primary mb-3" onclick="generate()">Generate Page</button>
+    
+   </div>
+    </div>
+    
+    
+
+    <div style="min-width:320px; height:400px;padding: 5px;margin:5px; border: 1px solid black; overflow: scroll;">
+  <h4>privacy policy page Preview </h4>
+<hr />
+<div id="preview">
+
+
+  <h2 style= "text-align:center; "> Welcome to <span class="cname1">Webdose</span></h2> 
+  <h4 id="tag" style="text-align: center;"></h4>
+  <p>When you use<span class="ctype1"> Our </span>services managed in the url <span id="curl1"> webdose.com </span> means you are trusting<span class="ustome" > us </span>with your information and <span class="wetoi" >We </span>understand it is<span class="ctype1">Our </span>great responsibility to make your data and information safe with<span class="ustome1" > us. </span> This page explains how,when ,and why a perticular data is collected from your side and when the information  gets erased from<span class="ustome1" > us. </span></p> 
+  <div class= "divlist ">
+  <p class= "list "> <a href="#sec1" >Information <span class="wetoi" >We </span>collect, why and when.</a></p><p class= "list "><a href="#sec2">Retaintion and deletion of your information</a></p><p class= "list "><a href="#sec3">Sharing of your information.</a></p><p class= "list "><a href="#sec4">Cookies policy.</a></p><p class="list"><a href="#sec5">CCPA Privacy Rights (Do Not Sell My Personal Information)</a></p><p class="list"><a href="#sec6">GDPR Data Protection Rights</a></p><p class= "list "><a id="#sec7">How to contact<span class="ustome1" > us. </span></a></p></div><hr /> 
+    <h2 id="sec1">What,when,where <span class="wetoi" >We </span>collect Information. </h2>
+    <p><span class="wetoi" >We </span>collect information to improve<span class="ctype1"> Our </span>services for you as well as for<span class="ctype1"> Our </span>other users. </p><div id="sign"><h5>Information you provide during sign-up </h5><p><span class="wetoi" >We </span>collect your basic datas during sign-up to identify you and to provide you better results. basic information like  <span id="emi" >E-mail id</span> <span id="fbi" >,Facebook id</span> <span id="na">,name</span> <span id="geny">,gender</span> <span id="add1">,address</span> <span id="dob1">,Date of Birth</span> . </p><p> <span id="emi1" >E-mail id</span> <span id="fbi1" >,Facebook id</span> id is used for your further login to your account and it remains with<span class="ustome" > us </span>up-to termination of your account by you or sometimes <span class="wetoi" >We </span>also terminate your account from<span class="ctype1"> Our </span>services to make<span class="ctype1"> Our </span>platform free of spam and safe for other users. </p><p>other informations are used to provide you better result and also to make<span class="ctype1"> Our </span>platform safe for others. </p></div><h5>during commenting, reviewing and sharing </h5><p><span class="wetoi" >We </span>use your E-mail ID ,name and your content to show it to the  other users as it helps<span class="ustome" > us </span>to provide a trust worthy information about a topic or content to others in which you have commented or reviewed.</p><h5>Device information</h5><p><span class="wetoi" >We </span>use your device information like device width, browser type and version ,etc in which you visit<span class="ctype1"> Our </span> website to increase your experience in<span class="ctype1"> Our </span>platforms. information such as device width to adjust<span class="ctype1"> Our </span>platform width accordingly and type of browser and operating system to hide or show some extra features because every browser and operating system provides different feature for it's users .</p><h2 id="sec2">Retaintion and deletion of your information</h2>  <p><span class="wetoi" >We </span>keep your data up-to which you are with<span class="ustome" > us </span>and after that <span class="wetoi" >We </span>clean up everything related to you but sometimes if you have commented in some places it  take Some time to get deleted from<span class="ustome" > us </span>because commenting in others content <span class="wetoi" >We </span>count it as content creators property in which you have commented or reviewed .For instant deletion of your comments you can contact<span class="ustome" > us </span>and be sure <span class="wetoi" >We </span>are always with you.</p><h2  id="sec3">Sharing of your information.</h2><p>sometime <span class="wetoi" >We </span>may share your basic information for business purposes but datas will so much basic that it will not harm youe privacy bussiness purpose includes sending you costumized email from third party services to grab your attention towards<span class="ctype1"> Our </span>website. </p><h2 id="sec4">cookies</h2><p>like all other websites<span class="ctype1"> Our </span>website also use cookies to show you more relevant products, services and pages. cookies help to find your desired page more easily. cookies are small piece of codes stored in in your system during your visit to<span class="ctype1"> Our </span>website and it gets automatically erased after some days if you will not visit<span class="ctype1"> Our </span>website frequently or you can erase it manually by erasing  your browsing datas. learn more about cookies. </p><h2 id="sec5">Datas used by advertising network. </h2><p><span class="wetoi" >We </span>use to advertise in<span class="ctype1"> Our </span>website to generate revenueand to keep<span class="ustome" > us </span>live in internet and these advertising networks may use some of your information to show you relevant ads which are use full for you but <span class="wetoi" >We </span>don't have any direct connection with them.</p><h5>Google -adsense ads</h5><p>google Adsense is one of the major player in ads network. Google is one of a third-party vendor on<span class="ctype1"> Our </span>site. It also uses cookies, known as DART cookies, to serve ads to<span class="ctype1"> Our </span>site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p><h5>Advertising Partners Privacy Policies</h5><p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on <span class="cname1">Webdose</span>, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p><p>Note that <span class="cname1">Webdose</span> has no access to or control over these cookies that are used by third-party advertisers.</p><h2 id="sec5">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2><p>Under the CCPA, among other rights, California consumers have the right to:</p><p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p><p>Request that a business delete any personal data about the consumer that a business has collected.</p><p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p><p>If you make a request, <span class="wetoi" >We </span>have one month to respond to you. If you would like to exercise any of these rights, please contact<span class="ustome1" > us. </span></p><h2 id="sec6">GDPR Data Protection Rights</h2><p><span class="wetoi" >We </span>would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p><p><b>The right to access </b>– You have the right to request copies of your personal data. <span class="wetoi" >We </span>may charge you a small fee for this service.</p><p><b>The right to rectification</b> – You have the right to request that <span class="wetoi" >We </span>correct any information you believe is inaccurate. You also have the right to request that <span class="wetoi" >We </span>complete the information you believe is incomplete.</p><p><b>The right to erasure</b> – You have the right to request that <span class="wetoi" >We </span>erase your personal data, under certain conditions.</p><p><b>The right to restrict processing</b> – You have the right to request that <span class="wetoi" >We </span>restrict the processing of your personal data, under certain conditions.</p><p><b>The right to object to processing </b>– You have the right to object to<span class="ctype1"> Our </span>processing of your personal data, under certain conditions.</p><p><b>The right to data portability </b>– You have the right to request that <span class="wetoi" >We </span>transfer the data that <span class="wetoi" >We </span>have collected to another organization, or directly to you, under certain conditions.</p><p>If you make a request, <span class="wetoi" >We </span>have one month to respond to you. If you would like to exercise any of these rights, please contact<span class="ustome1" > us. </span></p><h2>Children's Information</h2><p>Another part of<span class="ctype1"> Our </span>priority is adding protection for children while using the internet. <span class="wetoi" >We </span>encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p><p><span class="cname1">Webdose</span> does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on<span class="ctype1"> Our </span>website, <span class="wetoi" >We </span>strongly encourage you to contact<span class="ustome" > us </span>immediately and <span class="wetoi" >We </span>will do<span class="ctype1"> Our </span>best efforts to promptly remove such information from<span class="ctype1"> Our </span>records.</p>
+      <div id="conta"><h2 id="sec7">Contact <span class="ustome" > us </span></h2>
+     <div style="background-color: wheat;margin: auto;padding:10px; width: 75%;height: 100%;" >
+      <span id="add3">Address:<span id="add4"></span> .</span>
+      <span id="cu3"><br />Contact us:<span id="cu4"></span> .</span>
+      <span id="mn3"><br />Mobile no. :<span id="mn4"></span> .</span>
+      <span id="ei3"><br />Email id:<span id="ei4"></span> .</span><br /><span id="ot"></span>
+      </div></div>
+    </div>
+    </div>
+    
+    
+    
+    <br /><br />
+    
+    
+    
+    
+    
+    
+<div style="position: relative; margin-left: 5px; min-width: 320px; ">
+  
+<h3>YOUR CODE</h3>
+<hr />
+<textarea style="width: 100%;height: 400px;tab-size: 4; -moz-tab-size: 4;
+ border-color: #c0c0c0; background:#e0e0e0;"  id="code" >YOUR CODE APPEAR HEAR... </textarea>
+ <button class="btn btn-success" style="position: absolute;top:0px;right: 40px; " onclick="copytofgh()"data-toggle="modal" data-target="#staticBackdrop">Copy code</button>
+      
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+ 
+    <div class="modal-content">
+       <img src="Scr.png" alt="" width="100%"/>
+      <div class="modal-header">
+       
+        <h5 class="modal-title" id="staticBackdropLabel"> Code Copied</h5>
+      </div>
+      <div class="modal-body" id="modalg">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+      
+       
+  
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+var text,text1; 
+window.onload = function()
+{
+  text1= document.getElementById("preview").innerHTML;
+  console.log("asu");
+  document.getElementById("preview").innerHTML="<h2 style= \u0022position:relative; top:150px;text-align:center;\u0022>PREVIEW APPEAR HERE</h2>";
+}
+function generate()
+{
+  document.getElementById("preview").innerHTML=text1;
+  
+  document.getElementById("tag").innerHTML=document.getElementById("ctag").value; 
+ let coname= document.getElementsByClassName("cname1");
+for(var i = 0; i < coname.length; i++) {
+  
+    coname[i].textContent=document.getElementById("cname").value;
+
+}
+
+if(document.genx.ctype.value=="individual")
+{
+   let cotype= document.getElementsByClassName("ctype1");
+for(var i = 0; i < cotype.length; i++) {
+  cotype[i].textContent=" my ";
+}
+
+cotype= document.getElementsByClassName("wetoi");
+for(var i = 0; i < cotype.length; i++) {
+  
+    cotype[i].textContent="I ";
+
+}
+cotype= document.getElementsByClassName("ustome");
+for(var i = 0; i < cotype.length; i++) {
+  
+    cotype[i].textContent=" me ";
+
+} cotype= document.getElementsByClassName("ustome1");
+for(var i = 0; i < cotype.length; i++) {
+  
+    cotype[i].textContent=" me.";
+
+}}
+
+
+
+
+if (!document.getElementById("add").checked)
+document.getElementById("add1").innerHTML="";
+if (!document.getElementById("email").checked){
+document.getElementById("emi").innerHTML="";
+  document.getElementById("emi1").innerHTML="";
+}
+if (!document.getElementById("fb").checked){
+document.getElementById("fbi").innerHTML="";
+document.getElementById("fbi1").innerHTML="";
+}
+if (!document.getElementById("dob").checked)
+document.getElementById("dob1").innerHTML="";
+if (!document.getElementById("name10").checked)
+document.getElementById("na").innerHTML="";
+if (!document.getElementById("gen").checked)
+document.getElementById("geny").innerHTML="";
+
+
+
+if(document.genx.youn.value=="No")
+{
+document.getElementById("sign").innerHTML="";
+}
+
+
+
+document.getElementById("curl1").textContent=document.getElementById("curl").value;
+
+
+
+if(document.getElementById("cadd").value=="" && document.getElementById("cpurl").value=="" && document.getElementById("ceid").value=="" && document.getElementById("cother").value=="" && document.getElementById("cmn").value==""){
+document.getElementById("conta").innerHTML="";
+}
+else{
+ 
+if(document.getElementById("cadd").value=="")
+  {
+    document.getElementById("add3").innerHTML="";
+    
+    
+  }
+  else
+  
+  document.getElementById("add4").textContent=document.getElementById("cadd").value;
+  if(document.getElementById("cmn").value=="")
+  {
+    document.getElementById("mn3").innerHTML="";
+  }
+  else
+  document.getElementById("mn4").textContent=document.getElementById("cmn").value;
+  if(document.getElementById("cpurl").value=="")
+  {
+    document.getElementById("cu3").textContent="";
+  }
+  else
+  document.getElementById("cu4").innerHTML=document.getElementById("cpurl").value;
+  if(document.getElementById("ceid").value=="")
+  {
+document.getElementById("ei3").textContent="";
+
+  }
+  else{
+  document.getElementById("ei4").textContent=document.getElementById("ceid").value;}
+  
+  document.getElementById("ot").textContent=document.getElementById("cother").value;
+}
+
+text=document.getElementById("preview").innerHTML;
+text=text.replace("<div id=\u0022conta\u0022></div>","");
+ document.getElementById("code").textContent= text; 
+}
+function copytofgh(){
+  
+ var copyText = document.getElementById("code");
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+document.getElementById("modalg").innerHTML=
+document.getElementById("code").textContent
+}  
+	
+	
+
+</script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>

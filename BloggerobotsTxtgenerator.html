@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Generate sitemap for blogger</title>
+  </head>
+  <body>
+    <style>
+   #code {
+      tab-size: 4;
+      -moz-tab-size: 4;
+      border-color: #c0c0c0;
+      background: #e0e0e0;
+    }
+    </style>
+<div class="container">
+<div class="row justify-content-center">
+<div class="text-white col-md-6 col-12">
+<div class="m-1 p-2 bg-secondary rounded">
+<div class="form-group mt-3">
+    <label for="url">Enter Website/blog URL </label>
+    <input type="URL" class="form-control" id="url" aria-describedby="emailHelp" placeholder="https://blogname.blogspot.com" name="url">
+   <div class="container my-3 bg-light rounded text-dark p-2">
+     <p></p>
+     <strong>FORMAT ALLOWED</strong> <p>(Enter the main URL not subdirectory) </p>
+     
+     <p>1.https://blogname.com</p>
+  
+     <p>2.https://blogname.blogspot.com</p>
+   <p>3.https://www.blogname.com</p>
+     <p>4.https://www.blogname.blogspot.com</p>
+     <p></p>
+  
+</div>
+</div>
+  <button  class="btn btn-primary" onclick="generate()">Generate ROBOTS.TXT</button>
+  </div>
+</div> 
+
+<div class="text-white col-md-6 col-12">
+<div class="alert alert-success mt-1" role="alert">
+ Click on generate then click copy code and  paste on your blogger settings robots.txt file.
+</div>
+<div class="p-2 bg-secondary rounded">
+<div id="code" style="width:100%;height:200px;overflow: scroll;"  class="p-2 text-dark mb-2 rounded align-items-center d-flex justify-content-center" >your code.....</div>
+  <button class="btn btn-success"onclick="copycat()" data-toggle="modal" data-target="#staticBackdrop" >Copy Code</button>
+  </div>
+
+</div> 
+</div>
+
+</div>
+
+<div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+ 
+    <div class="modal-content">
+       <img src="Scr.png" alt="" width="100%"/>
+      <div class="modal-header">
+       
+        <h5 class="modal-title" id="staticBackdropLabel"> Code Copied</h5>
+      </div>
+      <div class="modal-body" id="modalg">Generate code first...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+      
+        <hr class="featurette-divider">
+  <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-sm-7">
+            <h2 class="featurette-heading">How to generate robots.txt? and how to use robots.txt for your blogger website?  </h2>
+            
+            <ol class="lead">
+              <li>Copy your website URL or manually type the URL (check the format we have given below the URL entry box) and paste it on the URL box.</li>
+            <li>Click on generate Robots.txt file .</li>
+            <li>Copy the while code by clicking copy code button.</li>
+            <li>Go to your blogger dashboard -> setting ->crawler and indexing ,enable costume robots.txt and below it paste the copied code.</li>
+            </ol>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?google,technology" alt="Generic placeholder image">
+          </div>
+        </div>
+   <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-sm-7">
+            <h2 class="featurette-heading">What is Robots.txt ?</h2>
+            <p class="lead">Robots.txt is a file which which instruct the search engine(ex. google, bing, yahoo, etc.) crawlers to either crawl or not-crawl a post ora page or a group of post/pages .Now what is crawl, crawling is the process in which search engine automatic robots visit your websites and try to understand and visualize your whole page /post and how much useful content it can provide to their user 👤 with their highly advance automatic bot.</p>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?blogging" alt="Generic placeholder image">
+          </div>
+        </div>
+
+
+
+        <hr class="featurette-divider">
+  <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-sm-7">
+            <h2 class="featurette-heading">Features of using our robots. text generator.</h2>
+            <ol class="lead"><li>Generate the most Robots.txt file for your blogger blog which will be properly compatible with all detach engines and best in 2021 and it will help to provide maximum SEO result for your blogger blog.</li>
+            <li>Absolute free </li>
+            <li>Generate in a click</li>
+            <li>No sign up or login required for Generating any pages from our website including Robots.txt generator for blogger.</li>
+            </ol>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?blogging" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function generate()
+{
+let url=document.getElementById("url").value; 
+document.getElementById("code").innerHTML="<div class=\u0022d-flex justify-content-center\u0022><div class=\u0022spinner-border\u0022 role=\u0022status\u0022><span class=\u0022sr-only\u0022>Loading...</span></div></div>";
+setTimeout(function () {
+document.getElementById("code").innerText="\nUser - agent: Mediapartners - Google\nDisallow:\n\nUser - agent: *\nDisallow: /search\nAllow: /\n\nSitemap: "+url+"/sitemap.xml";
+    }, 3000);
+}
+
+function copycat()
+{
+var r = document.createRange();
+r.selectNode(document.getElementById("code"));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+document.getElementById("modalg").innerText=document.getElementById("code").innerText;
+}
+
+
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+   
+
+
+
+
+
+

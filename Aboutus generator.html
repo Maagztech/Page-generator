@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title> </title>
+ 
+</head>
+<body>
+  
+<div class="container d-flex">
+   <div class="container bg-dark rounded py-3 my-2 col-sm-10 col-md-8 col-xl-6" style="color: white; ">
+     <p><span class="badge badge-danger">* Mandatory</span>  represents the must attempt entity in the form. </p>
+     <hr />
+  <div class="custom-control custom-radio "> <input type="radio" id="company" name="ctype" class="custom-control-input" checked="" value="comp">
+  <label class="custom-control-label" for="company">Company</label>
+  </div>
+  <span>Or</span> <span class="badge badge-danger" style="float:right;">* Mandatory</span>
+  <div class="custom-control custom-radio "><input type="radio" id="indiv" name="ctype" class="custom-control-input">
+  <label class="custom-control-label" for="indiv">Individual</label>
+</div>
+<hr />
+<div class="form-group ">
+   <label for="cname">Company/Website name <span class="badge badge-danger">* Mandatory</span></label>
+   <input class="form-control" type="text" placeholder="ex. Google, Microsoft" id="cname" />
+</div>
+      
+<div class="form-group">
+        <label for="curl">Company/Website URL <span class="badge badge-danger">* Mandatory</span></label>
+        <input class="form-control" type="url" id="curl"  placeholder="google.com" />
+       <div class="list-group" id="list">
+
+</div>
+</div>
+      
+<div class="form-group">
+        <label for="ctag">Company/Website tag line </label>
+        <input class="form-control" type="text" id="ctag" value="" placeholder="helping bloggers since 2021" />
+      </div>
+      
+<div class="form-group">
+        <label for="cotype">Your contents type(separate by comma) <span class="badge badge-danger">* Mandatory</span></label>
+        <input class="form-control" type="text" placeholder="ex. News,Science,Technology" id="cotype" value=""  />
+      </div>
+
+<div class="input-group my-4" style="position:relative;">
+<span class="badge badge-danger" style="position:absolute;top:2px;left:2px;">* Mandatory</span>
+  <div class="input-group-prepend">
+    
+    <span class="input-group-text"><br />speciality <br />or <br /> uniqueness <br />of your <br />blog <br />Or<br />website <br /></span>
+  </div>
+  <textarea id="codesc" class="form-control" placeholder="Example.
+Latest news updates,
+Best science articles
+
+(Donot include we or I only property)* " aria-label="With textarea"></textarea>
+</div>
+
+<div class="form-group">
+        <label for="cfond">Founder/Admin name</label>
+        <input class="form-control" type="text" placeholder="Elon Musk" id="cfond" value=""  />
+      </div>
+      
+      <div class="form-group" >
+        <label for="cuurl">contact page URL </label>
+        <input class="form-control" type="url" placeholder="pagegenerator.tech/p/contact-us.html" id="cuurl"/>
+      </div>
+     <div class="alert alert-primary" role="alert" id="pass"><p><span class="badge badge-danger">* Mandatory </span>  represents the mandatory entity in the form. </p></div>
+      <button id="yo" class="btn btn-primary mb-3" data-container="body" data-toggle="popover" data-placement="top" data-content="adgh" onclick="generate()" >Generate Page</button>
+    
+   <button id="ho" class="btn btn-warning mb-3" >Open manual</button>
+      
+    </div>
+    </div>
+      
+ 
+   
+    
+<!--put here your accordion-->
+<div class="accordion container" id="accordionExample" style="display:none;">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          What is a about us page ? 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+       A about page is the most important page of your blog. About page helps reader or user of your  blog to  know more about the author or admin of the blog. About page builds a trust for you in the mind of your blog or website user. Now it is also mandatory by some online ads-network that your blog should must have a about page in order to show our ads on your blog. Because a about page increases the clock of your ads by increasing the trust on you. 
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Best practices for generating a about us page
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Truth is the best policy in order to create or generate a about page of your blog. Tell your company or brand true mission ,it's future aspects, and tell the truth about the past story of your blog though the about page. Include the words from the founder or admin of the blog.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          How to generate a about us page? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Generating a about page for your blog is very easy through this tool. Just provide your enter truth about your blog /brand/ website which present in any CMS or hosting platform (like wordpreess, blogger, hostinger or any other hosting platform) .Some inputs are mandatory and some inputs are of tryouts choinmce if you wish to give then it will generate a great about page but still only mandatory things can also able to generate it 
+        mandatory includes
+        <ol>
+          <li>Type of your blog(individual or company) </li>
+          <li>Name of your website or blog</li>
+          <li>Home page URL of your blog </li>
+          <li>Type of content you provide</li>
+          <li>Specofication or uniqueness of your blog</li>
+        </ol>
+        Some are not mandatory ,like
+        <ol>
+          <li>Tag line of your blog</li>
+          <li>Founder name of your blog</li>
+          <li>Abd contact page URL of your blog(because some website first generate about page and then generate contact page )
+          </li>
+        </ol>
+        
+      </div>
+    </div>
+  </div>
+<div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          For whom our about page generator tool is best? 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+      You can use the about page generator for any case still there are some  case in which this about  page generator tool will provide maximum results, Case includes
+      <ol>
+        <li>If your are going to degenerate a about page for your simple blog</li>
+        <li>About us generator for blogger blogs</li>
+        <li>About us generator for wordpreess blogs</li>
+        <li>Going to start a new blog in science and technology direction and want to generate a about page of your blog</li>
+        <li>Generatr about page for blog providing simple what's app status </li>
+        <li>Basically you can use about page for any case.</li>
+      </ol>
+      </div>
+    </div>
+  </div>
+<div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Features of using our about us page generator for your blog ?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        <ol>
+          <li>Generate about page for your blog which is present on any hosting or platform like blogger or wordpress. </li>
+          <li>We have tried to make the generated about page which  can build long lasting trust of your user on you. </li>
+          <li>About page Code generated will be compatible in every browser.</li>
+          <li>About page generator tool is very easy to use.</li>
+          <li>About page generator tool is free to use and you can use it as many times as you want.</li>
+          <li>No sign-up required to generate the about page generator tool.</li>
+        </ol>
+ </div>
+    </div>
+  </div>
+</div>
+    
+ <div class="container my-3">
+       <h2>Preview</h2>
+       <hr />
+     <div id="preview" class="container border border-dark" style="overflow:scroll;height:400px;padding:15px;">
+     <p>PREVIEW APPEAR HERE..</p>
+     </div>
+     </div>
+
+
+<div class="container my-4" style="position: relative;" >
+    <h2>YOUR CODE</h2>
+       <hr />
+   <button class="btn btn-success mb-3"  style="position: absolute; top: 0px; right:40px;" onclick="copytofgh()" data-toggle="modal" data-target="#staticBackdrop">
+  Copy Code</button>
+  <textarea style="width: 100%;height: 400px;tab-size: 4; -moz-tab-size: 4;
+ border-color: #c0c0c0; background:#e0e0e0; padding:15px;"  id="code">YOUR CODE APPEAR HERE... </textarea>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable">
+ <div class="modal-content">
+       <a href="/" style="display: block; padding: 1em 0px; text-align: center;"><img alt="page generator" border="0" data-original-height="116" data-original-width="643" src="https://1.bp.blogspot.com/-kKY6jQGooZY/YN1ake19dxI/AAAAAAAAIog/XtjBGZOsYB0j-sVBERVeigTT97viS6NbgCPcBGAYYCw/s320/Screenshot_2021_0701_113230.png" width="320" /></a>
+      <div class="modal-header">
+       <h5 class="modal-title" id="staticBackdropLabel"> Code Copied</h5>
+      </div>
+      <div class="modal-body" id="modalg">Generate code first...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$('#list').hide();
+
+
+function run() {
+  $("#curl").val($(this).html());
+               };
+$("body").on('click', '.list-group-item', run);
+$('#curl').on(
+        {
+ click: function () {
+   
+cname1=document.getElementById("cname").value; 
+
+              $('#list').html("<button type=\u0022button\u0022 class=\u0022list-group-item list-group-item-action\u0022 >"+cname1+".com</button><button type=\u0022button\u0022 class=\u0022list-group-item list-group-item-action\u0022 >"+cname1+".co</button><button type=\u0022button\u0022 class=\u0022list-group-item list-group-item-action\u0022 >"+cname1+".xyz</button><button type=\u0022button\u0022 class=\u0022list-group-item list-group-item-action\u0022 >"+cname1+".in</button>   ");
+              
+           $('#list').slideToggle(500);
+            },
+            mouseleave: function () {
+             $('#list').slideUp(500);}
+            });
+$('#ho').click(function () {
+        $('.accordion').slideToggle(1000,function(){
+
+      if($('.accordion').is(":hidden"))
+      $('#ho').text("Show manual");
+      else 
+$('#ho').text("Hide manual");
+    });
+   });
+
+
+
+function generate()
+{
+
+arry=["Website name","Website URL","","Content type"];
+  
+x=document.getElementsByTagName("input");
+for(i=2;i<6;i++)
+{
+if(i==4)
+continue; 
+if(x[i].value=="")
+{
+
+$('#pass').html("You forgotten to put <strong>"+arry[i-2]+"</strong><br/><p><span class=\u0022badge badge-danger\u0022>* Mandatory </span>  represents the mandatory entity in the form. </p>");
+$('#preview').text("Complete the form Properly.") ;
+$('#code').text("Complete the form Properly.");
+  return; 
+}
+}
+
+cname=document.getElementById("cname").value;
+ctag=document.getElementById("ctag").value; curl=document.getElementById("curl").value;
+cotype=document.getElementById("cotype").value; 
+codesc=document.getElementById("codesc").value;
+if(codesc=="")
+{
+$('#pass').html("You forgotten to put <strong>Uniqueness of Website</strong><br/><p><span class=\u0022badge badge-danger\u0022>* Mandatory </span>  represents the mandatory entity in the form. </p>");
+$('#preview').text("Complete the form Properly.") ;
+$('#code').text("Complete the form Properly.");
+  return; 
+}
+cfond='Founder '+cname; 
+if(document.getElementById("cfond").value=='')
+cfond=document.getElementById("cfond").value+' ('+cfond+')';
+cuurl=document.getElementById("cuurl").value; 
+wo='our';
+go='We';
+aa='are';
+if (document.getElementById('indiv').checked) 
+{
+wo='my';
+go='I';
+aa='am';
+}
+con='';
+if(cuurl=='')
+con='<p>If you require any more information or have any questions about '+wo+' about '+cname+', please feel free to contact us by visiting  <a href='+cuurl+'>'+cuurl+'</a>.</p>';
+let text='<h2 style=\u0022text-align:center; \u0022> Welcome to '+cname+'.</h2>\n<h4 style=\u0022text-align: center;\u0022>'+ctag+'</h4><p>'+go+' '+aa+' happy that you want to know something more about '+cname+'.</p><hr><div><ol><li><a href=\u0022#sec1\u0022>Introduction</a></li><li><a href=\u0022#sec2\u0022>Mission</a></li><li><a href=\u0022#sec3\u0022>About '+cname+'</a></li><li><a href=\u0022#sec4\u0022>Services</a></li><li><a href=\u0022#sec5\u0022>Founder Words</a></li><li><a href=\u0022#sec6\u0022>Contact</a></li></ol></div><hr /><p id=\u0022sec1\u0022>Nowadays people are more dependent on online products and services that\u0027s why '+go+' have also taken a step to keep people updated in the '+cotype+' field with fresh content of '+cotype+'. '+wo+' priority is to provide you better updates and information from '+cotype+'.</p><h2 id=\u0022sec2\u0022>'+wo+' mission</h2><p>There are hundreds of websites created every second, and many get dead end every second and the major cause for this dead-end is the fake and invaluable content they provide. So, '+wo+' main goal is to provide you 100% Original, Safe, fresh, and useful content in '+cotype+'. which is most important to have a great experience on the world wide web and internet era.</p><p>'+go+' mainly focus on '+wo+' service so and improving it regularly to provide a better user experience to all users.</p><p>'+go+' focus on the '+cotype+' niche so, '+wo+' main priority is to search for new content and present it in front of you to make you learn something new and bring out your better version. </p><h2 id=\u0022sec3\u0022>services</h2><p>'+go+' '+aa+' mainly focused on the '+cotype+' categories so, '+go+' have tried to proceed with y'+wo+' most relevant content in the mentioned direction if you are interested towards '+cotype+' then you can visit daily to get more latest information.</p><p>Also, '+go+' provide a Notification update service you can join by email and other Social Media Platforms, and all Links you can get on the contact page of our website visit now. <a href"Cuurl">cname</a></p><h2 id=\u0022sec4\u0022>About '+cname+'</h2><p>As you can see already '+go+' mention what is '+wo+' goal and Service again '+go+' repeat that '+go+' mainly focus on '+cotype+' Categories to help people.'+cname+' is dedicated to providing you the it\u0022s best, with a focus on dependability and '+codesc+'.</p><p>This Website is Created only to help people because many people are still spending hours to get exact information so, this is the only motive to create <a href=\u0022'+curl+'\u0022>'+cname+'</a>, to help people and provide them a better web experience. </p><p id=\u0022sec5\u0022>Now it\u0027s the time for some words from Cname founder</p><p>As per my point of view, many people visit the internet to get some information but 90% of the time they get wrong information so, the priority of '+wo+' website '+cname+' is to provide 100% legit and accurate information to '+wo+' users, Also, '+go+' hope '+wo+' dream comes true one day, and '+wo+' website will provide Original Content to provide a better user experience. So, From my Side thanks for visiting '+wo+' website.</p><p style=\u0022text-align:right;\u0022>'+cfond+'</p><h2 id=\u0022sec6\u0022>Contact</h2><p>This website is only for you so, anything you don\u0027t like please mention to us through the comment section. Contact us through the mentioned link.'+con+'</p><p>Team '+cname+' is working to turn its passion into a booming online website. '+go+' hope you enjoy '+wo+' services as much as '+go+' enjoy offering them to you.</p><p>'+go+' will keep posting more important posts on my Website for all of you. Please give y'+wo+' support and love.</p><p style=\u0022text-align:center; \u0022>Thanks For Visiting '+wo+' Creation.</p><h5 style=\u0022text-align:center; \u0022>Have a nice day.</h5> ';
+if(cuurl=="")
+{
+  text=text.replace("<li><a href=\u0022#sec6\u0022>Contact</a></li>","");
+}
+
+
+
+
+
+
+
+document.getElementById("preview").innerHTML="<div class=\u0022d-flex justify-content-center\u0022><div class=\u0022spinner-border\u0022 role=\u0022status\u0022><span class=\u0022sr-only\u0022>Loading...</span></div></div>";
+
+setTimeout(function () {
+document.getElementById("preview").innerHTML=text;
+  document.getElementById("code").value=text;
+}, 5000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛";
+}, 1000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛 🕐";
+}, 2000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛 🕐 🕛";
+}, 3000);
+
+}
+function copytofgh(){
+  var copyText = document.getElementById("code");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+document.getElementById("modalg").innerHTML=document.getElementById("code").value;
+}
+</script>
+</body>
+</html>

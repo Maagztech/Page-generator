@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>disclaimergenerator</title>
+</head>
+
+<body>
+  <div class="container d-flex">
+   <div class="container bg-dark rounded py-3 my-2 col-sm-10 col-md-8 col-xl-6" style="color: white; ">
+  <div class="custom-control custom-radio ">
+  <input type="radio" id="company" name="ctype" class="custom-control-input" checked="" value="comp">
+  <label class="custom-control-label" for="company">Company</label>
+  </div>
+  <span>Or</span>
+  <div class="custom-control custom-radio "><input type="radio" id="indiv" name="ctype" class="custom-control-input">
+  <label class="custom-control-label" for="indiv">Individual</label>
+</div>
+<hr />
+<div class="form-group ">
+   <label for="cname">Company/Website name </label>
+   <input class="form-control" type="text" placeholder="ex. Google, Mucrosoft" id="cname" />
+</div>
+      
+<div class="form-group ">
+        <label for="curl">Company/Website URL </label>
+        <input class="form-control" type="url" id="curl" value="" placeholder="google.com" />
+</div>
+      
+<div class="form-group ">
+        <label for="ctag">Company/Website tag line </label>
+        <input class="form-control" type="text" id="ctag" value="" placeholder="helping bloggers since 2021" />
+      </div>
+ 
+      <div class="form-group">
+        <label for="cuurl">contact page URL </label>
+        <input class="form-control" type="text" placeholder="pagegenerator.tech/p/contact-us.html" id="cuurl"/>
+      </div>
+      <br />
+   <button class="btn btn-primary mb-3" onclick="generate()">Generate Page</button>
+    </div>
+    </div>
+ 
+     <div class="container my-3">
+       <h2>Preview</h2>
+       <hr />
+     <div id="preview" class="container border border-dark" style="overflow:scroll;height:400px;padding:15px;">
+     <p>PREVIEW APPEAR HERE..</p>
+     </div>
+     </div>
+
+    
+   
+
+<div class="container my-4" style="position: relative;" >
+    <h2>YOUR CODE</h2>
+       <hr />
+   <button class="btn btn-success mb-3"  style="position: absolute; top: 0px; right:40px;" onclick="copytofgh()" data-toggle="modal" data-target="#staticBackdrop">
+  Copy Code</button>
+  <textarea style="width: 100%;height: 400px;tab-size: 4; -moz-tab-size: 4;
+ border-color: #c0c0c0; background:#e0e0e0; padding:15px;"  id="code">YOUR CODE APPEAR HERE... </textarea>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable">
+ <div class="modal-content">
+       <img src="Scr.png" alt="" width="100%"/>
+      <div class="modal-header">
+       <h5 class="modal-title" id="staticBackdropLabel"> Code Copied</h5>
+      </div>
+      <div class="modal-body" id="modalg">Generate code first...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+<script>
+function generate()
+{
+ let i, x = document.getElementsByTagName("input");
+ for(i=1;i<6;i++)
+ {
+   if(i==4 ||i==5)
+   continue;
+  if(x[i].value=="")
+  {
+    
+document.getElementById("preview").innerText="Complete the form Properly.\nCompany or website - \n1. name \n2.URL  \nis mandatory." ;
+  document.getElementById("code").value="Complete the form Properly." ;
+  return;
+    
+  }
+ }
+ctag=document.getElementById("ctag").value; 
+cname=document.getElementById("cname").value;
+curl=document.getElementById("curl").value; 
+cuurl=document.getElementById("cuurl").value; 
+wo='our';
+go='we';
+if (document.getElementById('indiv').checked) 
+{
+wo='my';
+go='I';
+}
+let text='<h2 style=\u0022text-align:center; \u0022> Welcome to '+cname+'.</h2>\n<h4 style=\u0022text-align: center;\u0022>'+ctag+'</h4><p>This page explains the disclaimer for using '+cname+' services present in the URL <a href='+curl+'>'+curl+'</a>.Read the below points before taking any actions directly or indirectly mentioned in some article of '+wo+' website</p><h3>CONTENTS</h3><hr><div><ol><li><a href=\u0022#sec1\u0022>Disclaimer</a></li><li><a href=\u0022#sec2\u0022>Consent</a></li><li><a href=\u0022#sec3\u0022>Update</a></li><li><a href=\u0022#sec4\u0022>Contact</a></li></ol></div><hr /> <h2 id=\u0022sec1\u0022>Disclaimers for '+cname+'</h2><p>All the information on this website - <a href='+curl+'>'+curl+'</a>- is published in good faith and for general information purpose only. '+cname+'does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website ('+cname+'), is strictly at your own risk. '+cname+' will not be liable for any losses and/or damages in connection with the use of '+wo+' website.</p><p>From '+wo+' website, you can visit other websites by following hyperlinks to such external sites. While '+go+' strive to provide only quality links to useful and ethical websites, '+go+' have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before '+go+' have the opportunity to remove a link which may have gone \u0027bad\u0027.</p><p>Please be also aware that when you leave '+wo+' website, other sites may have different privacy policies and terms which are beyond '+wo+' control. Please be sure to check the Privacy Policies of these sites as well as their \u0022Terms of Service\u0022 before engaging in any business or uploading any information.</p><h2 id=\u0022sec2\u0022>Consent</h2><p>By using '+wo+'website, you hereby consent to '+wo+' disclaimer and agree to its terms.</p><h2 id=\u0022sec3\u0022>Update</h2><p>Should '+go+' update, amend or make any changes to this document, those changes will be prominently posted here.</p>';
+if(cuurl=="")
+{
+  text=text.replace("<li><a href=\u0022#sec4\u0022>Contact</a></li>","");
+}
+else
+text=text+'<h2 id=\u0022sec4\u0022>Contact</h2><p>If you require any more information or have any questions about '+wo+' site disclaimer, please feel free to contact us by visiting  <a href='+cuurl+'>'+cuurl+'</a>.</p>';
+document.getElementById("preview").innerHTML="<div class=\u0022d-flex justify-content-center\u0022><div class=\u0022spinner-border\u0022 role=\u0022status\u0022><span class=\u0022sr-only\u0022>Loading...</span></div></div>";
+
+setTimeout(function () {
+document.getElementById("preview").innerHTML=text;
+  document.getElementById("code").value=text;
+}, 5000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛";
+}, 1000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛 🕐";
+}, 2000);
+setTimeout(function () {
+document.getElementById("code").value="Loading..🕛 🕐 🕛";
+}, 3000);
+
+}
+function copytofgh(){
+  var copyText = document.getElementById("code");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+document.getElementById("modalg").innerHTML=
+document.getElementById("code").value;
+}
+	
+	
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,229 @@
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+   #code {
+      tab-size: 4;
+      -moz-tab-size: 4;
+      border-color: #c0c0c0;
+      background: #e0e0e0;
+    }
+    </style>
+<div class="container">
+<div class="row justify-content-center">
+<div class="text-white col-md-6 col-12">
+<div class="form-group mt-3">
+<div class="m-1 p-2 bg-secondary rounded">
+
+<label for="url">Enter YouTube video URL or video Id </label>
+<div class="input-group flex-nowrap">
+
+  <input type="url" class="form-control" placeholder="https://youtu.be/j8IJKJLQ80w" aria-label="Username" aria-describedby="addon-wrapping" id="url" autofocus="">
+  
+    <div class="input-group-prepend">
+      <div class="input-group-text" id="addon-wrapping">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+</svg>
+</div>
+</div>
+</div>
+ <div class="input-group my-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Width</span>
+      </div>
+      <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="100" id="width">
+      <select id="Dwidth" style="width:60px;">
+        <option value="%">%</option>
+        <option value="px">px</option>
+      </select>
+    </div>
+    <div class="input-group my-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Height</span>
+      </div>
+      <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="100" id="height">
+      <select id="Dheight"style="width:60px;">
+        <option value="%">%</option>
+        <option value="px">px</option>
+      </select>
+    </div>
+<div class="d-flex justify-content-between m-2">
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="auto">
+  <label class="custom-control-label" for="auto">Autoplay </label>
+</div>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="caption">
+  <label class="custom-control-label" for="caption">Caption</label>
+</div>
+</div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert" id="auto1" style="display:none;">
+  Due to Chrome's new policy autoplay does not work only in chrome browser.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<hr />
+
+
+  
+  <button type="submit" class="btn btn-primary" id="mai">Generate code</button>
+  
+  <button  class="btn btn-success"  disabled="0" id="disa" onclick="window.location.href='#preview'">view preview below</button>
+
+</div>
+</div>
+</div>
+<div class="text-white col-md-6 col-12 mt-3">
+
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="show" style="display:none;">
+  🤩Now copy the code and paste on your post.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+<div class="p-2 bg-secondary rounded">
+<div id="code" style="width:100%;height:200px;overflow: scroll; padding-top:3px;"  class="p-2 text-dark mb-2 rounded align-items-center d-flex justify-content-center" >your code.....</div>
+  <button class="btn btn-success"onclick="copycat()" data-toggle="modal" data-target="#staticBackdrop" >Copy Code</button>
+  </div>
+
+</div> 
+</div>
+</div>
+<div class="container mt-2">
+<div  id="preview" style="height:400px;background: #e0e0e0;text-align:center;">
+ <div class="pt-3">
+    <h4>Your preview will appear here.</h4>
+  </div>
+</div>
+</div>
+<div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable">
+ <div class="modal-content">
+       <img src="Scr.png" alt="" width="100%"/>
+      <div class="modal-header">
+       <h5 class="modal-title" id="staticBackdropLabel"> Code Copied</h5>
+      </div>
+      <div class="modal-body" id="modalg">Generate code first...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+          <div class="col-sm-7">
+            
+            <h2 class="featurette-heading">How to use our YouTube embed video code generator? </h2>
+            
+            <ol class="lead">
+              <li>Copy the YouTube video link you want to create embed code by visiting YouTube <a href="https://play.google.com/store/apps/details?id=com.google.android.youtube" >android app </a>or <a href="youtube.com">visiting YouTube website</a>.Formats are like <br />https://youtu.be/j8IJKJLQ80w<br />https://m.youtube.com/watch?v=j8IJKJLQ80w <br />You can only enter the video I'd with out the whole link in the box <br />Example <br> j8IJKJLQ80w in the above link. 
+              </li>
+            <li>Paste the URL on the first box.</li>
+            <li>Chose the height and width of the frame.<br /><b>We suggest you to keep the height and width both To 100% to get a responsive beautiful player.</b></li>
+            <li>Now paste the code where ever you want And you are done.</li>
+            </ol>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?google,technology" alt="Generic placeholder image">
+          </div>
+        </div>
+   <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-sm-7">
+            <h2 class="featurette-heading">What is YouTube embed code ?</h2>
+            <p class="lead">YouTube embed code represent some HTML code lies which any one can implement on his website for a perticular video and the player will be shown on his webpage. It have many profits like user can get more knowledge from video after reading your post or document.User will spend more time on your page so they your warning can be maximized and also many more.This YouTube generator tool is specially designed for this purpose ,the toll is very easy to use and have proper manual to use it.You can generate your desired videos embed code at one click and directly copy if by one click and paste it on your desired page ,that's solve.</p>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?blogging" alt="Generic placeholder image">
+          </div>
+        </div>
+
+
+
+        <hr class="featurette-divider">
+  <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-sm-7">
+            <h2 class="featurette-heading">Features of using our Youtube video embed code generator.</h2>
+            <ol class="lead"><li>Generate a responsive player of YouTube videos.</li>
+            <li>Absolute free for generating YouTube embed code .</li>
+            <li>Generate YouTube embed video code in a click.</li>
+            <li>No sign up or login required for Generating any pages from our website including YouTube video embed code generator .</li>
+            </ol>
+          </div>
+          <div class="col-sm-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://source.unsplash.com/400x400/?blogging" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+</div>
+<script>
+document.getElementById("mai").addEventListener("click", function(event){
+  event.preventDefault()
+document.getElementById("show").style.display="block";
+generate();
+});
+
+
+function generate()
+{
+document.getElementById("disa").disabled=true;
+  let url=document.getElementById("url").value; 
+document.getElementById("code").innerHTML="<div class=\u0022d-flex justify-content-center\u0022><div class=\u0022spinner-border\u0022 role=\u0022status\u0022><span class=\u0022sr-only\u0022>Loading...</span></div></div>";
+let div1="",div2="";
+let width=document.getElementById("width").value,dwidth=document.getElementById("Dwidth").value,height=document.getElementById("height").value,dheight=document.getElementById("Dheight").value,auto=document.getElementById("auto").checked,cap=document.getElementById("caption").checked;
+if (width=="100" && height=="100" && dwidth=="%" && dheight=="%"){
+ div1="<div class=\u0022 wrapper\u0022  style=\u0022position: relative;width: 100%; height: 0;padding-bottom: 56.25%;\u0022><style>.wrapper iframe {position:absolute;left: 0;top: 0;}</style>";
+ div2="</div>";
+}
+let id=document.getElementById("url").value;
+id=id.replace("https://m.youtube.com/watch?v=","");
+id=id.replace("https://youtu.be/","");
+id=id.replace(" ","");
+if(auto==false)auto=0;
+else {auto=1;document.getElementById("auto1").style.display="block";}
+if(cap==false)cap=0;
+else cap=1;
+
+
+let co=div1+"<iframe\nwidth=\u0022"+width+dwidth+"\u0022 height=\u0022"+height+dheight+"\u0022\ntype=\u0022text/html\u0022\nsrc=\u0022"+"https://www.youtube.com/embed/\n"+id+"?autoplay="+auto+"&cc_load_policy="+cap+"\u0022 allowfullscreen>\n</iframe>"+div2;
+document.getElementById("preview").innerHTML=co;
+document.getElementById("preview").style.background="white";
+document.getElementById("modalg").innerText=document.getElementById("code").innerText;
+
+setTimeout(function () {
+  document.getElementById("disa").disabled=false;
+document.getElementById("code").innerText=co;
+document.getElementById("modalg").innerText=co;}, 3000);
+}
+function copycat()
+{
+var r = document.createRange();
+r.selectNode(document.getElementById("code"));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+
+   
+
+
+
+
+
+
